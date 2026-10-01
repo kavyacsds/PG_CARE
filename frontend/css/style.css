@@ -1,0 +1,835 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #141b2d;
+    --sidebar: #111727;
+    --card: #222b42;
+    --card-hover: #29334d;
+    --border: #303a52;
+
+    --text: #f5f6fa;
+    --muted: #969fb2;
+
+    --accent: #ffb06d;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Layout */
+
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* Sidebar */
+
+.sidebar {
+    width: 230px;
+    min-height: 100vh;
+
+    background: var(--sidebar);
+
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    margin-bottom: 50px;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nav-item {
+    padding: 12px 14px;
+
+    border-radius: 8px;
+
+    color: var(--muted);
+
+    transition: 0.2s;
+}
+
+.nav-item:hover {
+    background: var(--card);
+    color: var(--text);
+}
+
+.nav-item.active {
+    background: var(--card);
+    color: var(--text);
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* Main */
+
+.main-content {
+    flex: 1;
+
+    max-width: 1400px;
+
+    padding: 40px 50px;
+}
+
+
+/* Top Bar */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 40px;
+}
+
+.page-label,
+.section-label {
+    font-size: 11px;
+
+    color: var(--muted);
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 7px;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+.primary-button {
+    background: var(--accent);
+
+    color: #161616;
+
+    padding: 11px 17px;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.primary-button:hover {
+    opacity: 0.9;
+}
+
+
+/* Statistics */
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 16px;
+
+    margin-bottom: 50px;
+}
+
+.stat-card {
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    padding: 22px;
+}
+
+.stat-card p {
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin-bottom: 12px;
+}
+
+.stat-card h2 {
+    font-size: 28px;
+}
+
+
+/* Sections */
+
+.section {
+    margin-bottom: 50px;
+}
+
+.section-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 18px;
+}
+
+.section-header h2 {
+    font-size: 20px;
+}
+
+.text-link {
+    color: var(--accent);
+
+    font-size: 13px;
+}
+
+
+/* Complaints */
+
+.complaint-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.complaint-card {
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    padding: 18px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    transition: 0.2s;
+}
+
+.complaint-card:hover {
+    background: var(--card-hover);
+}
+
+.complaint-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+.issue-number {
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+.complaint-card h3 {
+    font-size: 15px;
+
+    margin-bottom: 5px;
+}
+
+.complaint-card p {
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+.complaint-meta {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+/* Badges */
+
+.priority,
+.status {
+    font-size: 11px;
+
+    padding: 6px 9px;
+
+    border-radius: 6px;
+}
+
+.priority.high {
+    color: #ffb0a8;
+    background: rgba(255, 120, 110, 0.1);
+}
+
+.priority.medium {
+    color: #ffcf8b;
+    background: rgba(255, 180, 90, 0.1);
+}
+
+.status.submitted {
+    color: var(--muted);
+
+    background: rgba(255, 255, 255, 0.05);
+}
+
+
+/* Rooms */
+
+.rooms-grid {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 12px;
+}
+
+.room-card {
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    padding: 20px;
+}
+
+.room-card span {
+    font-size: 20px;
+
+    font-weight: 600;
+}
+
+.room-card p {
+    color: var(--muted);
+
+    font-size: 12px;
+
+    margin-top: 8px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 190px;
+    }
+
+    .main-content {
+        padding: 30px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .rooms-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .app {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+
+        padding: 20px;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+    }
+
+    .navigation {
+        flex-direction: row;
+    }
+
+    .main-content {
+        padding: 25px 18px;
+    }
+
+    .topbar {
+        align-items: flex-start;
+
+        gap: 20px;
+
+        flex-direction: column;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .rooms-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .complaint-card {
+        align-items: flex-start;
+
+        gap: 15px;
+
+        flex-direction: column;
+    }
+}
+/* Filters */
+
+.filters {
+    display: grid;
+
+    grid-template-columns: 2fr repeat(4, 1fr);
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+.search-input,
+.filters select {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    color: var(--text);
+
+    outline: none;
+
+    font-size: 13px;
+}
+
+.search-input::placeholder {
+    color: var(--muted);
+}
+
+.search-input:focus,
+.filters select:focus {
+    border-color: var(--accent);
+}
+
+.filters select {
+    cursor: pointer;
+}
+
+.filters select option {
+    background: var(--card);
+    color: var(--text);
+}
+@media (max-width: 900px) {
+
+    .filters {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+/* Complaint Form */
+
+.form-container {
+    max-width: 760px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    padding: 30px;
+}
+
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+
+.form-group label {
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    margin-bottom: 9px;
+
+    color: var(--text);
+}
+
+
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    background: #192238;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    padding: 12px 14px;
+
+    color: var(--text);
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    outline: none;
+}
+
+
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: var(--accent);
+
+}
+
+
+.form-group textarea {
+
+    resize: vertical;
+
+    min-height: 130px;
+
+}
+
+
+.form-group textarea::placeholder {
+
+    color: var(--muted);
+
+}
+
+
+/* Priority */
+
+.priority-options {
+
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.priority-option {
+
+    position: relative;
+
+    cursor: pointer;
+}
+
+
+.priority-option input {
+
+    position: absolute;
+
+    opacity: 0;
+
+}
+
+
+.priority-option span {
+
+    display: block;
+
+    padding: 10px 18px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 7px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    transition: 0.2s;
+}
+
+
+.priority-option input:checked + span {
+
+    border-color: var(--accent);
+
+    color: var(--accent);
+
+    background: rgba(255, 176, 109, 0.08);
+
+}
+
+
+/* File Upload */
+
+.file-upload {
+
+    border: 1px dashed var(--border);
+
+    border-radius: 10px;
+
+    padding: 25px;
+
+    position: relative;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.file-upload:hover {
+
+    border-color: var(--accent);
+
+}
+
+
+.file-upload input {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    opacity: 0;
+
+    cursor: pointer;
+
+}
+
+
+.file-upload-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+}
+
+
+.upload-title {
+
+    font-size: 14px;
+
+    color: var(--text);
+
+}
+
+
+.upload-subtitle {
+
+    font-size: 12px;
+
+    color: var(--muted);
+
+}
+
+
+/* Form Buttons */
+
+.form-actions {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    padding-top: 10px;
+
+}
+
+
+.secondary-button {
+
+    padding: 11px 17px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+}
+
+
+.secondary-button:hover {
+
+    color: var(--text);
+
+    background: var(--card-hover);
+
+}
+
+
+.form-actions .primary-button {
+
+    border: none;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+}
+/* ========================================
+   COMPLAINT DETAILS
+======================================== */
+
+.complaint-details {
+    max-width: 1000px;
+}
+
+
+.detail-card {
+    background: #222B42;
+    border: 1px solid #303A52;
+    border-radius: 16px;
+    padding: 30px;
+}
+
+
+.detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+
+.detail-header h2 {
+    margin: 8px 0 0;
+    font-size: 28px;
+    color: #F5F6FA;
+}
+
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+
+.detail-section {
+    margin-bottom: 25px;
+}
+
+
+.detail-label {
+    display: block;
+    color: #969FB2;
+    font-size: 13px;
+    margin-bottom: 7px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+
+.detail-section strong {
+    color: #F5F6FA;
+    font-size: 16px;
+}
+
+
+.detail-section h3 {
+    color: #F5F6FA;
+    margin-bottom: 10px;
+}
+
+
+.description-text {
+    color: #C5CAD5;
+    background: #141B2D;
+    border: 1px solid #303A52;
+    border-radius: 10px;
+    padding: 16px;
+    line-height: 1.6;
+}
+
+
+.complaint-photo {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    max-height: 450px;
+    object-fit: contain;
+    border-radius: 12px;
+    border: 1px solid #303A52;
+    background: #141B2D;
+}
+
+
+@media (max-width: 700px) {
+
+    .detail-header {
+        flex-direction: column;
+    }
+
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-card {
+        padding: 20px;
+    }
+
+}

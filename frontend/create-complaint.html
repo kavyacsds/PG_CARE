@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Report Issue | PG Care</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            PG<span>CARE</span>
+        </div>
+
+
+        <nav class="navigation">
+
+            <a
+                href="index.html"
+                class="nav-item"
+            >
+                Dashboard
+            </a>
+
+
+            <a
+                href="complaints.html"
+                class="nav-item"
+            >
+                Complaints
+            </a>
+
+
+            <a
+                href="create-complaint.html"
+                class="nav-item active"
+            >
+                Report Issue
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <p>PG Management</p>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+
+        <header class="topbar">
+
+            <div>
+
+                <p class="page-label">
+                    PG MANAGEMENT
+                </p>
+
+                <h1>
+                    Report an Issue
+                </h1>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- Complaint Form -->
+
+        <section class="form-container">
+
+
+            <form id="complaintForm">
+
+
+                <!-- Room -->
+
+                <div class="form-group">
+
+                    <label for="room">
+                        Room
+                    </label>
+
+                    <select
+                        id="room"
+                        name="room"
+                        required
+                    >
+
+                        <option value="">
+                            Select room
+                        </option>
+
+                        <option value="1">
+                            Room 101
+                        </option>
+
+                        <option value="2">
+                            Room 102
+                        </option>
+
+                        <option value="3">
+                            Room 103
+                        </option>
+
+                        <option value="4">
+                            Room 104
+                        </option>
+
+                        <option value="5">
+                            Room 105
+                        </option>
+
+                        <option value="6">
+                            Room 106
+                        </option>
+
+                        <option value="7">
+                            Room 107
+                        </option>
+
+                        <option value="8">
+                            Room 108
+                        </option>
+
+                        <option value="9">
+                            Room 109
+                        </option>
+
+                        <option value="10">
+                            Room 110
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- Category -->
+
+                <div class="form-group">
+
+                    <label for="category">
+                        Category
+                    </label>
+
+                    <select
+                        id="category"
+                        name="category"
+                        required
+                    >
+
+                        <option value="">
+                            Select category
+                        </option>
+
+                        <option value="maintenance">
+                            Maintenance
+                        </option>
+
+                        <option value="cleaning">
+                            Cleaning
+                        </option>
+
+                        <option value="food">
+                            Food
+                        </option>
+
+                        <option value="technical">
+                            Technical
+                        </option>
+
+                        <option value="plumbing">
+                            Plumbing
+                        </option>
+
+                        <option value="room">
+                            Room
+                        </option>
+
+                        <option value="other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- Issue Type -->
+
+                <div class="form-group">
+
+                    <label for="issueType">
+                        Issue
+                    </label>
+
+                    <select
+                        id="issueType"
+                        name="issue_type"
+                        required
+                    >
+
+                        <option value="">
+                            Select issue
+                        </option>
+
+                        <option value="tap_leakage">
+                            Tap / Water Leakage
+                        </option>
+
+                        <option value="flush_problem">
+                            Flush Problem
+                        </option>
+
+                        <option value="fan">
+                            Fan
+                        </option>
+
+                        <option value="light">
+                            Light / Switch
+                        </option>
+
+                        <option value="wifi">
+                            Wi-Fi / Internet
+                        </option>
+
+                        <option value="cleaning">
+                            Cleaning
+                        </option>
+
+                        <option value="food_quality">
+                            Food Quality
+                        </option>
+
+                        <option value="other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- Priority -->
+
+                <div class="form-group">
+
+                    <label>
+                        Priority
+                    </label>
+
+
+                    <div class="priority-options">
+
+
+                        <label class="priority-option">
+
+                            <input
+                                type="radio"
+                                name="priority"
+                                value="low"
+                                required
+                            >
+
+                            <span>
+                                Low
+                            </span>
+
+                        </label>
+
+
+                        <label class="priority-option">
+
+                            <input
+                                type="radio"
+                                name="priority"
+                                value="medium"
+                            >
+
+                            <span>
+                                Medium
+                            </span>
+
+                        </label>
+
+
+                        <label class="priority-option">
+
+                            <input
+                                type="radio"
+                                name="priority"
+                                value="high"
+                            >
+
+                            <span>
+                                High
+                            </span>
+
+                        </label>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Description -->
+
+                <div class="form-group">
+
+                    <label for="description">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="description"
+                        name="description"
+                        rows="6"
+                        placeholder="Tell us what happened..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- Photo -->
+
+                <div class="form-group">
+
+                    <label for="photo">
+                        Attach Photo
+                    </label>
+
+
+                    <div class="file-upload">
+
+                        <input
+                            type="file"
+                            id="photo"
+                            name="photo"
+                            accept="image/png,image/jpeg,image/webp"
+                        >
+
+                        <div class="file-upload-content">
+
+                            <span class="upload-title">
+                                Choose a photo
+                            </span>
+
+                            <span class="upload-subtitle">
+                                JPG, PNG or WEBP · Max 5 MB
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Submit -->
+
+                <div class="form-actions">
+
+                    <a
+                        href="complaints.html"
+                        class="secondary-button"
+                    >
+                        Cancel
+                    </a>
+
+
+                    <button
+                        type="submit"
+                        class="primary-button"
+                    >
+                        Submit Complaint
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>

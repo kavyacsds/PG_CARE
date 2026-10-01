@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PG Care</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            PG<span>CARE</span>
+        </div>
+
+        <nav class="navigation">
+
+            <a href="index.html" class="nav-item active">
+                Dashboard
+            </a>
+
+            <a href="complaints.html" class="nav-item">
+                Complaints
+            </a>
+
+            <a href="create-complaint.html" class="nav-item">
+                Report Issue
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+            <p>PG Management</p>
+        </div>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Top Bar -->
+        <header class="topbar">
+
+            <div>
+                <p class="page-label">PG MANAGEMENT</p>
+                <h1>Dashboard</h1>
+            </div>
+
+            <a
+                href="create-complaint.html"
+                class="primary-button"
+            >
+                + Report Issue
+            </a>
+
+        </header>
+
+
+        <!-- Statistics -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <p>Total Rooms</p>
+                <h2 id="totalRooms">Loading...</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Open Issues</p>
+                <h2 id="openIssues">Loading...</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>In Progress</p>
+                <h2 id="inProgress">Loading...</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Resolved</p>
+                <h2 id="resolved">Loading...</h2>
+            </div>
+
+        </section>
+
+
+        <!-- Recent Complaints -->
+        <section class="section">
+
+            <div class="section-header">
+
+                <div>
+                    <p class="section-label">ACTIVITY</p>
+                    <h2>Recent Issues</h2>
+                </div>
+
+                <a
+                    href="complaints.html"
+                    class="text-link"
+                >
+                    View all
+                </a>
+
+            </div>
+
+
+            <div
+                class="complaint-list"
+                id="recentComplaints"
+            >
+
+                <div class="loading-message">
+                    Loading complaints...
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Rooms -->
+        <section class="section">
+
+            <div class="section-header">
+
+                <div>
+                    <p class="section-label">ROOMS</p>
+                    <h2>PG Rooms</h2>
+                </div>
+
+            </div>
+
+
+            <div
+                class="rooms-grid"
+                id="roomsGrid"
+            >
+
+                <div class="loading-message">
+                    Loading rooms...
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
