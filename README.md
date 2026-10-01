@@ -656,7 +656,7 @@ Vercel
 
 # 👩‍💻 Author
 
-**Srushti N B**
+**Kavya G V**
 
 Computer Science & Engineering Graduate
 
